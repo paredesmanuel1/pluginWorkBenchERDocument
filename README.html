@@ -1,0 +1,1229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0083)http://tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="blogger" name="generator">
+<link href="http://tmsanchezdev.blogspot.com.co/favicon.ico" rel="icon" type="image/x-icon">
+<link href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="El blog de tmsanchez - Atom" href="http://tmsanchezdev.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="El blog de tmsanchez - RSS" href="http://tmsanchezdev.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="El blog de tmsanchez - Atom" href="https://www.blogger.com/feeds/4785988599388365910/posts/default">
+
+<link rel="alternate" type="application/atom+xml" title="El blog de tmsanchez - Atom" href="http://tmsanchezdev.blogspot.com/feeds/7173113517320147597/comments/default">
+<link href="./README_files/installaPlugin.png" rel="image_src">
+<meta content="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html" property="og:url">
+<meta content="HTML Report from MySQLWorkbench 6.x Schema Model" property="og:title">
+<meta content=" This begun in 2010 when I started to create a Lua script to generate an HTML report from MySQLWorkbench 5.x ( http://tmsanchezdev.blogspot...." property="og:description">
+<meta content="http://2.bp.blogspot.com/-6O5ntJoM_2Y/VRRs4Pv8rJI/AAAAAAAAADM/okfwhoNY3kI/w1200-h630-p-nu/installaPlugin.png" property="og:image">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>El blog de tmsanchez: HTML Report from MySQLWorkbench 6.x Schema Model</title>
+<link type="text/css" rel="stylesheet" href="./README_files/454518911-widget_css_bundle.css">
+<link type="text/css" rel="stylesheet" href="./README_files/authorization.css">
+<style id="page-skin-1" type="text/css"><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima Lefty Stretch
+Date:     14 Jul 2006
+----------------------------------------------- */
+/* Variable definitions
+====================
+<Variable name="bgcolor" description="Page Background Color"
+type="color" default="#fff">
+<Variable name="textcolor" description="Text Color"
+type="color" default="#333">
+<Variable name="linkcolor" description="Link Color"
+type="color" default="#58a">
+<Variable name="pagetitlecolor" description="Blog Title Color"
+type="color" default="#666">
+<Variable name="descriptioncolor" description="Blog Description Color"
+type="color" default="#999">
+<Variable name="titlecolor" description="Post Title Color"
+type="color" default="#c60">
+<Variable name="bordercolor" description="Border Color"
+type="color" default="#ccc">
+<Variable name="sidebarcolor" description="Sidebar Title Color"
+type="color" default="#999">
+<Variable name="sidebartextcolor" description="Sidebar Text Color"
+type="color" default="#666">
+<Variable name="visitedlinkcolor" description="Visited Link Color"
+type="color" default="#999">
+<Variable name="bodyfont" description="Text Font"
+type="font" default="normal normal 100% Georgia, Serif">
+<Variable name="headerfont" description="Sidebar Title Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif">
+<Variable name="pagetitlefont" description="Blog Title Font"
+type="font"
+default="normal normal 200% Georgia, Serif">
+<Variable name="descriptionfont" description="Blog Description Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif">
+<Variable name="postfooterfont" description="Post Footer Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif">
+<Variable name="startSide" description="Start side in blog language"
+type="automatic" default="left">
+<Variable name="endSide" description="End side in blog language"
+type="automatic" default="right">
+*/
+/* Use this with templates/template-twocol.html */
+body {
+background:#ffffff;
+margin:0;
+color:#333333;
+font:x-small Georgia Serif;
+font-size/* */:/**/small;
+font-size: /**/small;
+text-align: center;
+}
+a:link {
+color:#5588aa;
+text-decoration:none;
+}
+a:visited {
+color:#999999;
+text-decoration:none;
+}
+a:hover {
+color:#cc6600;
+text-decoration:underline;
+}
+a img {
+border-width:0;
+}
+/* Header
+-----------------------------------------------
+*/
+#header-wrapper {
+margin:0 2% 10px;
+border:1px solid #cccccc;
+}
+#header-inner {
+background-position: center;
+margin-left: auto;
+margin-right: auto;
+}
+#header {
+margin: 5px;
+border: 1px solid #cccccc;
+text-align: center;
+color:#666666;
+}
+#header h1 {
+margin:5px 5px 0;
+padding:15px 20px .25em;
+line-height:1.2em;
+text-transform:uppercase;
+letter-spacing:.2em;
+font: normal normal 200% Georgia, Serif;
+}
+#header a {
+color:#666666;
+text-decoration:none;
+}
+#header a:hover {
+color:#666666;
+}
+#header .description {
+margin:0 5px 5px;
+padding:0 20px 15px;
+text-transform:uppercase;
+letter-spacing:.2em;
+line-height: 1.4em;
+font: normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+color: #999999;
+}
+#header img {
+margin-left: auto;
+margin-right: auto;
+}
+/* Outer-Wrapper
+----------------------------------------------- */
+#outer-wrapper {
+margin:0;
+padding:10px;
+text-align:left;
+font: normal normal 100% Georgia, Serif;
+}
+#main-wrapper {
+margin-right: 2%;
+width: 67%;
+float: right;
+display: inline;       /* fix for doubling margin in IE */
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
+}
+#sidebar-wrapper {
+margin-left: 2%;
+width: 25%;
+float: left;
+display: inline;       /* fix for doubling margin in IE */
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
+}
+/* Headings
+----------------------------------------------- */
+h2 {
+margin:1.5em 0 .75em;
+font:normal normal 78% 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif;
+line-height: 1.4em;
+text-transform:uppercase;
+letter-spacing:.2em;
+color:#999999;
+}
+/* Posts
+-----------------------------------------------
+*/
+h2.date-header {
+margin:1.5em 0 .5em;
+}
+.post {
+margin:.5em 0 1.5em;
+border-bottom:1px dotted #cccccc;
+padding-bottom:1.5em;
+}
+.post h3 {
+margin:.25em 0 0;
+padding:0 0 4px;
+font-size:140%;
+font-weight:normal;
+line-height:1.4em;
+color:#cc6600;
+}
+.post h3 a, .post h3 a:visited, .post h3 strong {
+display:block;
+text-decoration:none;
+color:#cc6600;
+font-weight:normal;
+}
+.post h3 strong, .post h3 a:hover {
+color:#333333;
+}
+.post-body {
+margin:0 0 .75em;
+line-height:1.6em;
+}
+.post-body blockquote {
+line-height:1.3em;
+}
+.post-footer {
+margin: .75em 0;
+color:#999999;
+text-transform:uppercase;
+letter-spacing:.1em;
+font: normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+line-height: 1.4em;
+}
+.comment-link {
+margin-left:.6em;
+}
+.post img, table.tr-caption-container {
+padding:4px;
+border:1px solid #cccccc;
+}
+.tr-caption-container img {
+border: none;
+padding: 0;
+}
+.post blockquote {
+margin:1em 20px;
+}
+.post blockquote p {
+margin:.75em 0;
+}
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+margin:1em 0;
+font-weight: bold;
+line-height: 1.4em;
+text-transform:uppercase;
+letter-spacing:.2em;
+color: #999999;
+}
+#comments-block {
+margin:1em 0 1.5em;
+line-height:1.6em;
+}
+#comments-block .comment-author {
+margin:.5em 0;
+}
+#comments-block .comment-body {
+margin:.25em 0 0;
+}
+#comments-block .comment-footer {
+margin:-.25em 0 2em;
+line-height: 1.4em;
+text-transform:uppercase;
+letter-spacing:.1em;
+}
+#comments-block .comment-body p {
+margin:0 0 .75em;
+}
+.deleted-comment {
+font-style:italic;
+color:gray;
+}
+.feed-links {
+clear: both;
+line-height: 2.5em;
+}
+#blog-pager-newer-link {
+float: left;
+}
+#blog-pager-older-link {
+float: right;
+}
+#blog-pager {
+text-align: center;
+}
+/* Sidebar Content
+----------------------------------------------- */
+.sidebar {
+color: #666666;
+line-height: 1.5em;
+}
+.sidebar ul {
+list-style:none;
+margin:0 0 0;
+padding:0 0 0;
+}
+.sidebar li {
+margin:0;
+padding-top:0;
+padding-right:0;
+padding-bottom:.25em;
+padding-left:15px;
+text-indent:-15px;
+line-height:1.5em;
+}
+.sidebar .widget, .main .widget {
+border-bottom:1px dotted #cccccc;
+margin:0 0 1.5em;
+padding:0 0 1.5em;
+}
+.main .Blog {
+border-bottom-width: 0;
+}
+/* Profile
+----------------------------------------------- */
+.profile-img {
+float: left;
+margin-top: 0;
+margin-right: 5px;
+margin-bottom: 5px;
+margin-left: 0;
+padding: 4px;
+border: 1px solid #cccccc;
+}
+.profile-data {
+margin:0;
+text-transform:uppercase;
+letter-spacing:.1em;
+font: normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+color: #999999;
+font-weight: bold;
+line-height: 1.6em;
+}
+.profile-datablock {
+margin:.5em 0 .5em;
+}
+.profile-textblock {
+margin: 0.5em 0;
+line-height: 1.6em;
+}
+.profile-link {
+font: normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+text-transform: uppercase;
+letter-spacing: .1em;
+}
+/* Footer
+----------------------------------------------- */
+#footer {
+width:660px;
+clear:both;
+margin:0 auto;
+padding-top:15px;
+line-height: 1.6em;
+text-transform:uppercase;
+letter-spacing:.1em;
+text-align: center;
+}
+
+--></style>
+<script src="./README_files/cb=gapi.loaded_3" async=""></script><script src="./README_files/cb=gapi.loaded_2" async=""></script><script src="./README_files/cb=gapi.loaded_1" async=""></script><script src="./README_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript">function a(){var b=window.location.href,c=b.split("?");switch(c.length){case 1:return b+"?m=1";case 2:return 0<=c[1].search("(^|&)m=")?null:b+"&m=1";default:return null}}var d=navigator.userAgent;if(-1!=d.indexOf("Mobile")&&-1!=d.indexOf("WebKit")&&-1==d.indexOf("iPad")||-1!=d.indexOf("Opera Mini")||-1!=d.indexOf("IEMobile")){var e=a();e&&window.location.replace(e)};
+</script><script type="text/javascript" src="./README_files/google_top_exp.js.descarga"></script><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style></head>
+<body>
+<div class="navbar section" id="navbar"><div class="widget Navbar" data-version="1" id="Navbar1"><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="" tabindex="0" vspace="0" width="100%" id="navbar-iframe" name="navbar-iframe" src="./README_files/navbar.html"></iframe></div>
+<script type="text/javascript" src="./README_files/plusone.js.descarga" gapi_processed="true"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar.g?targetBlogID\x3d4785988599388365910\x26blogName\x3dEl+blog+de+tmsanchez\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dBLUE\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttp://tmsanchezdev.blogspot.com/search\x26blogLocale\x3des\x26v\x3d2\x26homepageUrl\x3dhttp://tmsanchezdev.blogspot.com/\x26targetPostID\x3d7173113517320147597\x26blogPostOrPageUrl\x3dhttp://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html\x26vt\x3d-715662499058885587',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<div id="outer-wrapper"><div id="wrap2">
+<!-- skip links for text browsers -->
+<span id="skiplinks" style="display:none;">
+<a href="http://tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html#main">skip to main </a> |
+      <a href="http://tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html#sidebar">skip to sidebar</a>
+</span>
+<div id="header-wrapper">
+<div class="header section" id="header"><div class="widget Header" data-version="1" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h1 class="title">
+<a href="http://tmsanchezdev.blogspot.com.co/">El blog de tmsanchez</a>
+</h1>
+</div>
+<div class="descriptionwrapper">
+<p class="description"><span>Desarrollo de software y algo más</span></p>
+</div>
+</div>
+</div></div>
+</div>
+<div id="content-wrapper">
+<div id="crosscol-wrapper" style="text-align:center">
+<div class="crosscol no-items section" id="crosscol"></div>
+</div>
+<div id="main-wrapper">
+<div class="main section" id="main"><div class="widget Blog" data-version="1" id="Blog1">
+<div class="blog-posts hfeed">
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>jueves, 26 de marzo de 2015</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry">
+<a name="7173113517320147597"></a>
+<h3 class="post-title entry-title">
+<a href="http://tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html">HTML Report from MySQLWorkbench 6.x Schema Model</a>
+</h3>
+<div class="post-header-line-1"></div>
+<div class="post-body entry-content">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+This begun in 2010 when I started to create a Lua script to generate an HTML report from MySQLWorkbench 5.x (<a href="http://tmsanchezdev.blogspot.mx/2010/07/reporte-en-html-de-un-modelo-en.html" target="_blank">http://tmsanchezdev.blogspot.mx/2010/07/reporte-en-html-de-un-modelo-en.html</a>).<br>
+<br>
+Lua support has been removed from MySQLWorkbench and now we can use Python <span style="-webkit-text-stroke-width: 0px; background-color: white; color: #333333; display: inline !important; float: none; font-family: Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;">to generate plugins.</span><br>
+<span style="-webkit-text-stroke-width: 0px; background-color: white; color: #333333; display: inline !important; float: none; font-family: Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;"><br></span>
+<span style="-webkit-text-stroke-width: 0px; background-color: white; color: #333333; display: inline !important; float: none; font-family: Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;">I updated the script to use phyton. Script is available here for <a href="https://www.dropbox.com/s/3ea38qno8w851lq/HTMLShemaReport.py?dl=0" target="_blank">download</a>.</span><br>
+<span style="-webkit-text-stroke-width: 0px; background-color: white; color: #333333; display: inline !important; float: none; font-family: Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;">&nbsp; </span><br>
+<span style="-webkit-text-stroke-width: 0px; background-color: white; color: #333333; display: inline !important; float: none; font-family: Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;">To Install the plugin go to Scripting / Install Plugin/Module then select HTMLShemaReport.py file and restart MySQL Workbench</span><br>
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="./README_files/installaPlugin.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="./README_files/installaPlugin.png" height="119" width="320"></a></div>
+<br>
+Open your model and go to Tools / Catalog and select "Database schema in HTML format" and provide a file name in save dialog.<br>
+<span style="-webkit-text-stroke-width: 0px; background-color: white; color: #333333; display: inline !important; float: none; font-family: Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;"><br></span>
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="./README_files/runningPlugin.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="./README_files/runningPlugin.png" height="94" width="320"></a></div>
+<br>
+<span style="-webkit-text-stroke-width: 0px; background-color: white; color: #333333; display: inline !important; float: none; font-family: Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;">Once document has been generated you will see following message:</span><br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://3.bp.blogspot.com/-3SItdPP9LNo/VRRuHbUz4GI/AAAAAAAAADk/VxumQiYi65o/s1600/fileGenerated.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><br></a><a href="./README_files/reportGenerated.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="./README_files/reportGenerated.png" height="132" width="320"></a></div>
+Then open your HTML document and see the report:<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="./README_files/htmlExample.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="./README_files/htmlExample.JPG" height="304" width="320"></a></div>
+<br>
+<span style="-webkit-text-stroke-width: 0px; background-color: white; color: #333333; display: inline !important; float: none; font-family: Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;">Finally I want to thank all readers for their contributions, specially to Rodrigo Schmidt who started script python.</span></div>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+Publicado por
+<span class="fn">tmsanchez</span>
+</span>
+<span class="post-timestamp">
+en
+<a class="timestamp-link" href="http://tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html" rel="bookmark" title="permanent link"><abbr class="published" title="2015-03-26T14:54:00-06:00">14:54</abbr></a>
+</span>
+<span class="post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-2076057793">
+<a href="https://www.blogger.com/post-edit.g?blogID=4785988599388365910&amp;postID=7173113517320147597&amp;from=pencil" title="Editar entrada">
+<img alt="" class="icon-action" height="18" src="./README_files/icon18_edit_allbkg.gif" width="18">
+</a>
+</span>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-2"><span class="post-labels">
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3"></div>
+</div>
+</div>
+<div class="comments" id="comments">
+<a name="comments"></a>
+<h4>9 comentarios:</h4>
+<div class="comments-content">
+<script async="async" src="./README_files/comments.js.descarga" type="text/javascript"></script>
+<script type="text/javascript">
+    (function() {
+      var items = [{'id': '6100118852309497199', 'body': 'Great Master!!!', 'timestamp': '1427404884247', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1427404884247#c6100118852309497199', 'author': {'name': 'Luis Jacinto', 'avatarUrl': '//lh3.googleusercontent.com/-3_8HO2URdQg/AAAAAAAAAAI/AAAAAAAACkA/KuJOG9tZk5g/s35-c/photo.jpg', 'profileUrl': 'https://www.blogger.com/profile/09649516681381900155'}, 'displayTime': '26 de marzo de 2015, 15:21', 'deleteclass': 'item-control blog-admin pid-1735014017'}, {'id': '6700584503289304275', 'body': 'Excelente tip profe. Saludos.', 'timestamp': '1427777950069', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1427777950069#c6700584503289304275', 'author': {'name': 'Omar Diaz Gonzalez', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/04111519615692376240'}, 'displayTime': '30 de marzo de 2015, 22:59', 'deleteclass': 'item-control blog-admin pid-1902717509'}, {'id': '4201957923564967970', 'body': 'Excelente tip, muchas gracias ', 'timestamp': '1447893350919', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1447893350919#c4201957923564967970', 'author': {'name': 'HistoriaPC', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/07284379369782611239'}, 'displayTime': '18 de noviembre de 2015, 18:35', 'deleteclass': 'item-control blog-admin pid-1296542536'}, {'id': '5080107785348464283', 'body': 'Thank you for updating the script.', 'timestamp': '1449359859957', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1449359859957#c5080107785348464283', 'author': {'name': 'Rodrigo Schmidt Nürmberg', 'avatarUrl': '//lh3.googleusercontent.com/-68HMKP2eSLY/AAAAAAAAAAI/AAAAAAAAAUY/85ydx-2TC8w/s35-c/photo.jpg', 'profileUrl': 'https://www.blogger.com/profile/12328103288023765273'}, 'displayTime': '5 de diciembre de 2015, 17:57', 'deleteclass': 'item-control blog-admin pid-629584845'}, {'id': '9036956617769423417', 'body': 'sale en blanco ', 'timestamp': '1476158396922', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1476158396922#c9036956617769423417', 'author': {'name': 'Carlos Frank Cori Evaristo', 'avatarUrl': '//lh6.googleusercontent.com/-cxeYoTdIUrU/AAAAAAAAAAI/AAAAAAAAAB0/00sSDQVKh7A/s35-c/photo.jpg', 'profileUrl': 'https://www.blogger.com/profile/12001973208479329951'}, 'displayTime': '10 de octubre de 2016, 22:59', 'deleteclass': 'item-control blog-admin pid-1391096183'}, {'id': '1672320329514984794', 'parentId': '9036956617769423417', 'body': 'a mi tambien me sale en blanco, encontraste alguna solucion amigo\x3cbr /\x3e?', 'timestamp': '1477095772011', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1477095772011#c1672320329514984794', 'author': {'name': 'james bond', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/11521773169711256093'}, 'displayTime': '21 de octubre de 2016, 19:22', 'deleteclass': 'item-control blog-admin pid-2030591269'}, {'id': '3841209311166939302', 'parentId': '9036956617769423417', 'body': '&#191;Qué versión de MySQLWorkbench estás utilizando?', 'timestamp': '1477134514903', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1477134514903#c3841209311166939302', 'author': {'name': 'tmsanchez', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/14375853157690320750'}, 'displayTime': '22 de octubre de 2016, 6:08', 'deleteclass': 'item-control blog-admin pid-2076057793'}, {'id': '6611141539140900732', 'body': 'Buenas tardes, a mi también me sale en blanco, utilizo la versión 6.3.', 'timestamp': '1480538162685', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1480538162685#c6611141539140900732', 'author': {'name': 'Walter Sainz', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/10549318762936764312'}, 'displayTime': '30 de noviembre de 2016, 14:36', 'deleteclass': 'item-control blog-admin pid-443266161'}, {'id': '7676149343070951664', 'body': 'Hola, a mi me salio la información en blanco; la versión que uso actualmente es la 6.3.\x3cbr /\x3eGracias.', 'timestamp': '1481730450348', 'permalink': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment\x3d1481730450348#c7676149343070951664', 'author': {'name': '-- El Origen de Todo --', 'avatarUrl': '//1.bp.blogspot.com/-Aw9zW_z7UQ0/WEl2SCD5WhI/AAAAAAAAD_Q/gkEzZZl4UzIXgbqYn6sUYoZnUuAsDqVuwCK4B/s35/Foto%25252Bde%25252BPerfil.JPG', 'profileUrl': 'https://www.blogger.com/profile/08250035779405326942'}, 'displayTime': '14 de diciembre de 2016, 9:47', 'deleteclass': 'item-control blog-admin pid-1717529611'}];
+      var msgs = {'loadMore': 'Cargar más...', 'loading': 'Cargando...', 'loaded': 'Ya no hay más', 'addComment': 'Añadir comentario', 'reply': 'Responder', 'delete': 'Eliminar'};
+      var config = {'blogId': '4785988599388365910', 'postId': '7173113517320147597', 'feed': 'http://tmsanchezdev.blogspot.com/feeds/7173113517320147597/comments/default', 'authorName': 'tmsanchez', 'authorUrl': 'https://www.blogger.com/profile/14375853157690320750', 'baseUri': 'https://www.blogger.com', 'maxThreadDepth': 2};
+
+// <![CDATA[
+      var cursor = null;
+      if (items && items.length > 0) {
+        cursor = parseInt(items[items.length - 1].timestamp) + 1;
+      }
+
+      var bodyFromEntry = function(entry) {
+        if (entry.gd$extendedProperty) {
+          for (var k in entry.gd$extendedProperty) {
+            if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
+              return '<span class="deleted-comment">' + entry.content.$t + '</span>';
+            }
+          }
+        }
+        return entry.content.$t;
+      }
+
+      var parse = function(data) {
+        cursor = null;
+        var comments = [];
+        if (data && data.feed && data.feed.entry) {
+          for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
+            var comment = {};
+            // comment ID, parsed out of the original id format
+            var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
+            comment.id = id ? id[2] : null;
+            comment.body = bodyFromEntry(entry);
+            comment.timestamp = Date.parse(entry.published.$t) + '';
+            if (entry.author && entry.author.constructor === Array) {
+              var auth = entry.author[0];
+              if (auth) {
+                comment.author = {
+                  name: (auth.name ? auth.name.$t : undefined),
+                  profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                  avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                };
+              }
+            }
+            if (entry.link) {
+              if (entry.link[2]) {
+                comment.link = comment.permalink = entry.link[2].href;
+              }
+              if (entry.link[3]) {
+                var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
+                if (pid && pid[1]) {
+                  comment.parentId = pid[1];
+                }
+              }
+            }
+            comment.deleteclass = 'item-control blog-admin';
+            if (entry.gd$extendedProperty) {
+              for (var k in entry.gd$extendedProperty) {
+                if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
+                  comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                } else if (entry.gd$extendedProperty[k].name == 'blogger.displayTime') {
+                  comment.displayTime = entry.gd$extendedProperty[k].value;
+                }
+              }
+            }
+            comments.push(comment);
+          }
+        }
+        return comments;
+      };
+
+      var paginator = function(callback) {
+        if (hasMore()) {
+          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+          if (cursor) {
+            url += '&published-min=' + new Date(cursor).toISOString();
+          }
+          window.bloggercomments = function(data) {
+            var parsed = parse(data);
+            cursor = parsed.length < 50 ? null
+                : parseInt(parsed[parsed.length - 1].timestamp) + 1
+            callback(parsed);
+            window.bloggercomments = null;
+          }
+          url += '&callback=bloggercomments';
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = url;
+          document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      };
+      var hasMore = function() {
+        return !!cursor;
+      };
+      var getMeta = function(key, comment) {
+        if ('iswriter' == key) {
+          var matches = !!comment.author
+              && comment.author.name == config.authorName
+              && comment.author.profileUrl == config.authorUrl;
+          return matches ? 'true' : '';
+        } else if ('deletelink' == key) {
+          return config.baseUri + '/delete-comment.g?blogID='
+               + config.blogId + '&postID=' + comment.id;
+        } else if ('deleteclass' == key) {
+          return comment.deleteclass;
+        }
+        return '';
+      };
+
+      var replybox = null;
+      var replyUrlParts = null;
+      var replyParent = undefined;
+
+      var onReply = function(commentId, domId) {
+        if (replybox == null) {
+          // lazily cache replybox, and adjust to suit this style:
+          replybox = document.getElementById('comment-editor');
+          if (replybox != null) {
+            replybox.height = '250px';
+            replybox.style.display = 'block';
+            replyUrlParts = replybox.src.split('#');
+          }
+        }
+        if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
+          document.getElementById(domId).insertBefore(replybox, null);
+          replybox.src = replyUrlParts[0]
+              + (commentId ? '&parentID=' + commentId : '')
+              + '#' + replyUrlParts[1];
+          replyParent = commentId;
+        }
+      };
+
+      var hash = (window.location.hash || '#').substring(1);
+      var startThread, targetComment;
+      if (/^comment-form_/.test(hash)) {
+        startThread = hash.substring('comment-form_'.length);
+      } else if (/^c[0-9]+$/.test(hash)) {
+        targetComment = hash.substring(1);
+      }
+
+      // Configure commenting API:
+      var configJso = {
+        'maxDepth': config.maxThreadDepth
+      };
+      var provider = {
+        'id': config.postId,
+        'data': items,
+        'loadNext': paginator,
+        'hasMore': hasMore,
+        'getMeta': getMeta,
+        'onReply': onReply,
+        'rendered': true,
+        'initComment': targetComment,
+        'initReplyThread': startThread,
+        'config': configJso,
+        'messages': msgs
+      };
+
+      var render = function() {
+        if (window.goog && window.goog.comments) {
+          var holder = document.getElementById('comment-holder');
+          window.goog.comments.render(holder, provider);
+        }
+      };
+
+      // render now, or queue to render when library loads:
+      if (window.goog && window.goog.comments) {
+        render();
+      } else {
+        window.goog = window.goog || {};
+        window.goog.comments = window.goog.comments || {};
+        window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
+        window.goog.comments.loadQueue.push(render);
+      }
+    })();
+// ]]>
+  </script>
+<div id="comment-holder">
+
+<div id="bc_0_10C" kind="c"><div id="bc_0_10CT"><div id="bc_0_9T" class="comment-thread" kind="r" t="0" u="0"><ol id="bc_0_9TB"><li id="bc_0_0B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/photo.jpg"></div><div id="c6100118852309497199" class="comment-block"><div id="bc_0_0M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/09649516681381900155">Luis Jacinto</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1427404884247#c6100118852309497199">26 de marzo de 2015, 15:21</a></span></div><p id="bc_0_0MC" class="comment-content">Great Master!!!</p><span id="bc_0_0MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Responder</a><span class="item-control blog-admin pid-1735014017"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=6100118852309497199">Eliminar</a></span></span></div><div id="bc_0_0BR" class="comment-replies"></div><div id="bc_0_0B_box" class="comment-replybox-single"></div></li><li id="bc_0_1B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35"></div><div id="c6700584503289304275" class="comment-block"><div id="bc_0_1M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/04111519615692376240">Omar Diaz Gonzalez</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1427777950069#c6700584503289304275">30 de marzo de 2015, 22:59</a></span></div><p id="bc_0_1MC" class="comment-content">Excelente tip profe. Saludos.</p><span id="bc_0_1MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Responder</a><span class="item-control blog-admin pid-1902717509"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=6700584503289304275">Eliminar</a></span></span></div><div id="bc_0_1BR" class="comment-replies"></div><div id="bc_0_1B_box" class="comment-replybox-single"></div></li><li id="bc_0_2B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35"></div><div id="c4201957923564967970" class="comment-block"><div id="bc_0_2M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/07284379369782611239">HistoriaPC</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1447893350919#c4201957923564967970">18 de noviembre de 2015, 18:35</a></span></div><p id="bc_0_2MC" class="comment-content">Excelente tip, muchas gracias </p><span id="bc_0_2MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Responder</a><span class="item-control blog-admin pid-1296542536"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=4201957923564967970">Eliminar</a></span></span></div><div id="bc_0_2BR" class="comment-replies"></div><div id="bc_0_2B_box" class="comment-replybox-single"></div></li><li id="bc_0_3B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/photo(1).jpg"></div><div id="c5080107785348464283" class="comment-block"><div id="bc_0_3M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/12328103288023765273">Rodrigo Schmidt Nürmberg</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1449359859957#c5080107785348464283">5 de diciembre de 2015, 17:57</a></span></div><p id="bc_0_3MC" class="comment-content">Thank you for updating the script.</p><span id="bc_0_3MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Responder</a><span class="item-control blog-admin pid-629584845"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=5080107785348464283">Eliminar</a></span></span></div><div id="bc_0_3BR" class="comment-replies"></div><div id="bc_0_3B_box" class="comment-replybox-single"></div></li><li id="bc_0_6B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/photo(2).jpg"></div><div id="c9036956617769423417" class="comment-block"><div id="bc_0_6M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/12001973208479329951">Carlos Frank Cori Evaristo</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1476158396922#c9036956617769423417">10 de octubre de 2016, 22:59</a></span></div><p id="bc_0_6MC" class="comment-content">sale en blanco </p><span id="bc_0_6MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Responder</a><span class="item-control blog-admin pid-1391096183"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=9036956617769423417">Eliminar</a></span></span></div><div id="bc_0_6BR" class="comment-replies"><span id="bc_0_6b+seedBq8d_D" kind="d"><div id="bc_0_4T" class="comment-thread inline-thread" kind="t" t="0" u="0"><span id="bc_0_4TT" class="thread-toggle thread-expanded" kind="g"><span id="bc_0_4TA" class="thread-arrow"></span><span id="bc_0_4TN" class="thread-count"><span id="bc_0_4TNT" style="display: none;"></span><span id="bc_0_4TNU" style="display: none;"></span><a href="javascript:;" target="_self">Respuestas</a><div id="bc_0_4TD" class="thread-dropContainer thread-expanded"><span class="thread-drop"></span></div></span></span><ol id="bc_0_4TC" class="thread-chrome thread-expanded"><div><li id="bc_0_4B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35"></div><div id="c1672320329514984794" class="comment-block"><div id="bc_0_4M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/11521773169711256093">james bond</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1477095772011#c1672320329514984794">21 de octubre de 2016, 19:22</a></span></div><p id="bc_0_4MC" class="comment-content">a mi tambien me sale en blanco, encontraste alguna solucion amigo<br>?</p><span id="bc_0_4MN" class="comment-actions secondary-text" kind="m"><span class="item-control blog-admin pid-2030591269"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=1672320329514984794">Eliminar</a></span></span></div><div id="bc_0_4BR" class="comment-replies"></div><div id="bc_0_4B_box" class="comment-replybox-single"></div></li><li id="bc_0_5B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35"></div><div id="c3841209311166939302" class="comment-block"><div id="bc_0_5M" class="comment-header" kind="m"><cite class="user blog-author"><a rel="nofollow" href="https://www.blogger.com/profile/14375853157690320750">tmsanchez</a></cite><span class="icon user blog-author"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1477134514903#c3841209311166939302">22 de octubre de 2016, 6:08</a></span></div><p id="bc_0_5MC" class="comment-content">¿Qué versión de MySQLWorkbench estás utilizando?</p><span id="bc_0_5MN" class="comment-actions secondary-text" kind="m"><span class="item-control blog-admin pid-2076057793"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=3841209311166939302">Eliminar</a></span></span></div><div id="bc_0_5BR" class="comment-replies"></div><div id="bc_0_5B_box" class="comment-replybox-single"></div></li></div><div id="bc_0_4I" class="continue" kind="ci"><a href="javascript:;" target="_self">Responder</a></div></ol><div id="bc_0_4T_box" class="comment-replybox-thread"></div></div></span></div><div id="bc_0_6B_box" class="comment-replybox-single"></div></li><li id="bc_0_7B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35"></div><div id="c6611141539140900732" class="comment-block"><div id="bc_0_7M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/10549318762936764312">Walter Sainz</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1480538162685#c6611141539140900732">30 de noviembre de 2016, 14:36</a></span></div><p id="bc_0_7MC" class="comment-content">Buenas tardes, a mi también me sale en blanco, utilizo la versión 6.3.</p><span id="bc_0_7MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Responder</a><span class="item-control blog-admin pid-443266161"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=6611141539140900732">Eliminar</a></span></span></div><div id="bc_0_7BR" class="comment-replies"></div><div id="bc_0_7B_box" class="comment-replybox-single"></div></li><li id="bc_0_8B" class="comment" kind="b"><div class="avatar-image-container"><img src="./README_files/Foto%252Bde%252BPerfil.JPG"></div><div id="c7676149343070951664" class="comment-block"><div id="bc_0_8M" class="comment-header" kind="m"><cite class="user"><a rel="nofollow" href="https://www.blogger.com/profile/08250035779405326942">-- El Origen de Todo --</a></cite><span class="icon user"></span><span class="datetime secondary-text"><a rel="nofollow" href="http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html?showComment=1481730450348#c7676149343070951664">14 de diciembre de 2016, 9:47</a></span></div><p id="bc_0_8MC" class="comment-content">Hola, a mi me salio la información en blanco; la versión que uso actualmente es la 6.3.<br>Gracias.</p><span id="bc_0_8MN" class="comment-actions secondary-text" kind="m"><a kind="i" href="javascript:;" target="_self" o="r">Responder</a><span class="item-control blog-admin pid-1717529611"><a o="d" target="_self" href="https://www.blogger.com/delete-comment.g?blogID=4785988599388365910&amp;postID=7676149343070951664">Eliminar</a></span></span></div><div id="bc_0_8BR" class="comment-replies"></div><div id="bc_0_8B_box" class="comment-replybox-single"></div></li></ol><div id="bc_0_9I" class="continue" kind="ci" style="display: none;"><a href="javascript:;" target="_self">Añadir comentario</a></div><div id="bc_0_9T_box" class="comment-replybox-thread"><iframe allowtransparency="true" class="blogger-iframe-colorize blogger-comment-from-post" frameborder="0" height="250px" id="comment-editor" name="comment-editor" src="./README_files/comment-iframe.html" width="100%" style="display: block;" data-resized="true"></iframe></div><div id="bc_0_9L" class="loadmore loaded" kind="rb"><a href="javascript:;" target="_self">Cargar más...</a></div></div></div></div></div>
+</div>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<p>
+</p>
+<a href="https://www.blogger.com/comment-iframe.g?blogID=4785988599388365910&amp;postID=7173113517320147597&amp;blogspotRpcToken=7074849" id="comment-editor-src"></a>
+
+<script type="text/javascript" src="./README_files/3629047462-comment_from_post_iframe.js.descarga"></script>
+<script type="text/javascript">
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
+<p></p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="http://tmsanchezdev.blogspot.com.co/2015/05/using-generatedvalue-with-firebird-and.html" id="Blog1_blog-pager-newer-link" title="Entrada más reciente">Entrada más reciente</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://tmsanchezdev.blogspot.com.co/2013/11/reporte-actualizado-del-modelo-de-la.html" id="Blog1_blog-pager-older-link" title="Entrada antigua">Entrada antigua</a>
+</span>
+<a class="home-link" href="http://tmsanchezdev.blogspot.com.co/">Página principal</a>
+</div>
+<div class="clear"></div>
+<div class="post-feeds">
+<div class="feed-links">
+Suscribirse a:
+<a class="feed-link" href="http://tmsanchezdev.blogspot.com/feeds/7173113517320147597/comments/default" target="_blank" type="application/atom+xml">Enviar comentarios (Atom)</a>
+</div>
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'es'};</script>
+</div></div>
+</div>
+<div id="sidebar-wrapper">
+<div class="sidebar section" id="sidebar"><div class="widget BlogArchive" data-version="1" id="BlogArchive1">
+<h2>Archivo del blog</h2>
+<div class="widget-content">
+<div id="ArchiveList">
+<div id="BlogArchive1_ArchiveList">
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">
+
+        ▼&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/search?updated-min=2015-01-01T00:00:00-06:00&amp;updated-max=2016-01-01T00:00:00-06:00&amp;max-results=2">
+2015
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2015_05_01_archive.html">
+mayo
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">
+
+        ▼&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2015_03_01_archive.html">
+marzo
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html">HTML Report from MySQLWorkbench 6.x Schema Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/search?updated-min=2013-01-01T00:00:00-06:00&amp;updated-max=2014-01-01T00:00:00-06:00&amp;max-results=1">
+2013
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2013_11_01_archive.html">
+noviembre
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/search?updated-min=2012-01-01T00:00:00-06:00&amp;updated-max=2013-01-01T00:00:00-06:00&amp;max-results=1">
+2012
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2012_02_01_archive.html">
+febrero
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/search?updated-min=2011-01-01T00:00:00-06:00&amp;updated-max=2012-01-01T00:00:00-06:00&amp;max-results=2">
+2011
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2011_08_01_archive.html">
+agosto
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2011_07_01_archive.html">
+julio
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/search?updated-min=2010-01-01T00:00:00-06:00&amp;updated-max=2011-01-01T00:00:00-06:00&amp;max-results=5">
+2010
+</a>
+<span class="post-count" dir="ltr">(5)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2010_10_01_archive.html">
+octubre
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2010_08_01_archive.html">
+agosto
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2010_07_01_archive.html">
+julio
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/search?updated-min=2009-01-01T00:00:00-06:00&amp;updated-max=2010-01-01T00:00:00-06:00&amp;max-results=5">
+2009
+</a>
+<span class="post-count" dir="ltr">(5)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2009_09_01_archive.html">
+septiembre
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tmsanchezdev.blogspot.com.co/2009_08_01_archive.html">
+agosto
+</a>
+<span class="post-count" dir="ltr">(4)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4785988599388365910&amp;widgetType=BlogArchive&amp;widgetId=BlogArchive1&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;BlogArchive1&quot;));" target="configBlogArchive1" title="Editar">
+<img alt="" height="18" src="./README_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget BlogList" data-version="1" id="BlogList1">
+<h2 class="title">Mi lista de blogs</h2>
+<div class="widget-content">
+<div class="blog-list-container" id="BlogList1_container">
+<ul id="BlogList1_blogs">
+<li style="display: block;">
+<div class="blog-icon">
+<img data-lateloadsrc="https://lh6.googleusercontent.com/proxy/i_efdMRX-j73tGZMLB395__lf6QdDLav1n7cRHAxddxMvnfplVAvWSv2zt8Z4my_BMMHg32cNo-TvQJb1nZ9KdZm=s0-d" height="16" width="16" src="./README_files/i_efdMRX-j73tGZMLB395__lf6QdDLav1n7cRHAxddxMvnfplVAvWSv2zt8Z4my_BMMHg32cNo-TvQJb1nZ9KdZm=s0-d">
+</div>
+<div class="blog-content">
+<div class="blog-title">
+<a href="http://elbuhobuscador.blogspot.com/" target="_blank">
+El Buho Errante</a>
+</div>
+<div class="item-content">
+<span class="item-title">
+<a href="http://elbuhobuscador.blogspot.com/2016/08/hablar-en-publico.html" target="_blank">
+Hablar en público...</a>
+</span>
+<div class="item-time">
+Hace 4 meses
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="display: block;">
+<div class="blog-icon">
+<img data-lateloadsrc="https://lh4.googleusercontent.com/proxy/NnRZp8Dm4uxxpLb4Z2PBb4Q-s58653PwqbbFvvx0H_U25l9JMMu3jJMgFZzhG5HW9cBXTo0cjJqTinFuc_UCpBVxfJCZ=s0-d" height="16" width="16" src="./README_files/NnRZp8Dm4uxxpLb4Z2PBb4Q-s58653PwqbbFvvx0H_U25l9JMMu3jJMgFZzhG5HW9cBXTo0cjJqTinFuc_UCpBVxfJCZ=s0-d">
+</div>
+<div class="blog-content">
+<div class="blog-title">
+<a href="http://rescatandoadelphi.blogspot.com/" target="_blank">
+Rescatando a Delphi</a>
+</div>
+<div class="item-content">
+<span class="item-title">
+<a href="http://rescatandoadelphi.blogspot.com/2014/03/my-proposal-for-better-delphi-with.html" target="_blank">
+My proposal for a better Delphi "With" statement</a>
+</span>
+<div class="item-time">
+Hace 2 años
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="display: block;">
+<div class="blog-icon">
+<img data-lateloadsrc="https://lh3.googleusercontent.com/proxy/nUm0j-rd_lH_0rssBednvHAnOz5cy_rvU_Thiv1GLB3bOKUX3pUOyJV376b1yNbMO1bwt7T2gParEB7Vd3TPAMDvvXcJBhEQgA=s0-d" height="16" width="16" src="./README_files/nUm0j-rd_lH_0rssBednvHAnOz5cy_rvU_Thiv1GLB3bOKUX3pUOyJV376b1yNbMO1bwt7T2gParEB7Vd3TPAMDvvXcJBhEQgA=s0-d" style="visibility: hidden;">
+</div>
+<div class="blog-content">
+<div class="blog-title">
+<a href="http://www.markdelphi.oamm.info/?feed=rss2" target="_blank">
+markdelphi</a>
+</div>
+<div class="item-content">
+<span class="item-title">
+</span>
+<div class="item-time">
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="display: block;">
+<div class="blog-icon">
+<img data-lateloadsrc="https://lh4.googleusercontent.com/proxy/urThpdcvqlwW5PWUct4M7CInHmbWex-t_5W89yPPv22Up7zH2m9necT3xkVyBIGd013MGIJaTYkKWkxYaNG6=s0-d" height="16" width="16" src="./README_files/urThpdcvqlwW5PWUct4M7CInHmbWex-t_5W89yPPv22Up7zH2m9necT3xkVyBIGd013MGIJaTYkKWkxYaNG6=s0-d" style="visibility: hidden;">
+</div>
+<div class="blog-content">
+<div class="blog-title">
+<a href="http://egostar.delphiaccess.com/feed/" target="_blank">
+La Turbo Señal</a>
+</div>
+<div class="item-content">
+<span class="item-title">
+</span>
+<div class="item-time">
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4785988599388365910&amp;widgetType=BlogList&amp;widgetId=BlogList1&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;BlogList1&quot;));" target="configBlogList1" title="Editar">
+<img alt="" height="18" src="./README_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div>
+</div><div class="widget Profile" data-version="1" id="Profile1">
+<h2>Datos personales</h2>
+<div class="widget-content">
+<dl class="profile-datablock">
+<dt class="profile-data">
+<a class="profile-name-link g-profile" href="https://www.blogger.com/profile/14375853157690320750" rel="author" style="background-image: url(//www.blogger.com/img/logo-16.png);" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+tmsanchez
+</a>
+</dt>
+</dl>
+<a class="profile-link" href="https://www.blogger.com/profile/14375853157690320750" rel="author">Ver todo mi perfil</a>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4785988599388365910&amp;widgetType=Profile&amp;widgetId=Profile1&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Profile1&quot;));" target="configProfile1" title="Editar">
+<img alt="" height="18" src="./README_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Followers" data-version="1" id="Followers1">
+<h2 class="title">Seguidores</h2>
+<div class="widget-content">
+<div id="Followers1-wrapper">
+<div style="margin-right:2px;">
+<div><script type="text/javascript" src="./README_files/plusone.js.descarga" gapi_processed="true"></script>
+<div id="followers-iframe-container"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="" tabindex="0" vspace="0" width="100%" id="I0_1483538116748" name="I0_1483538116748" src="./README_files/followers.html" height="84"></iframe></div>
+<script type="text/javascript">
+    window.followersIframe = null;
+    function followersIframeOpen(url) {
+      gapi.load("gapi.iframes", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          window.followersIframe = gapi.iframes.getContext().openChild({
+            url: url,
+            where: document.getElementById("followers-iframe-container"),
+            messageHandlersFilter: gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER,
+            messageHandlers: {
+              '_ready': function(obj) {
+                window.followersIframe.getIframeEl().height = obj.height;
+              },
+              'reset': function() {
+                window.followersIframe.close();
+                followersIframeOpen("https://www.blogger.com/followers.g?blogID\x3d4785988599388365910\x26colors\x3dCgt0cmFuc3BhcmVudBILdHJhbnNwYXJlbnQaBjY2NjY2NiIGNTU4OGFhKgZmZmZmZmYyBmNjNjYwMDoGNjY2NjY2QgY1NTg4YWFKBjk5OTk5OVIGNTU4OGFhWgt0cmFuc3BhcmVudA%3D%3D\x26pageSize\x3d21\x26postID\x3d7173113517320147597\x26origin\x3dhttp://tmsanchezdev.blogspot.com.co/");
+              },
+              'open': function(url) {
+                window.followersIframe.close();
+                followersIframeOpen(url);
+              },
+              'blogger-ping': function() {
+              }
+            }
+          });
+        }
+      });
+    }
+    followersIframeOpen("https://www.blogger.com/followers.g?blogID\x3d4785988599388365910\x26colors\x3dCgt0cmFuc3BhcmVudBILdHJhbnNwYXJlbnQaBjY2NjY2NiIGNTU4OGFhKgZmZmZmZmYyBmNjNjYwMDoGNjY2NjY2QgY1NTg4YWFKBjk5OTk5OVIGNTU4OGFhWgt0cmFuc3BhcmVudA%3D%3D\x26pageSize\x3d21\x26postID\x3d7173113517320147597\x26origin\x3dhttp://tmsanchezdev.blogspot.com.co/");
+  </script></div>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4785988599388365910&amp;widgetType=Followers&amp;widgetId=Followers1&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Followers1&quot;));" target="configFollowers1" title="Editar">
+<img alt="" height="18" src="./README_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div>
+</div>
+<!-- spacer for skins that want sidebar and main to be the same height-->
+<div class="clear">&nbsp;</div>
+</div>
+<!-- end content-wrapper -->
+<div id="footer-wrapper">
+<div class="footer no-items section" id="footer"></div>
+</div>
+</div></div>
+<!-- end outer-wrapper -->
+<link href="./README_files/SyntaxHighlighter.css" rel="stylesheet" type="text/css">
+<script src="./README_files/shCore.js.descarga" type="text/javascript"></script>
+<script src="./README_files/shBrushCss.js.descarga" type="text/javascript"></script>
+<script src="./README_files/shBrushJava.js.descarga" type="text/javascript"></script>
+<script src="./README_files/shBrushSql.js.descarga" type="text/javascript"></script>
+<script src="./README_files/shBrushXml.js.descarga" type="text/javascript"></script>
+<script src="./README_files/shBrushDelphi.js.descarga" type="text/javascript"></script>
+<script class="javascript">  
+ //<![CDATA[  
+   function FindTagsByName(container, name, Tag)  
+   {  
+       var elements = document.getElementsByTagName(Tag);  
+       for (var i = 0; i < elements.length; i++)  
+       {  
+           if (elements[i].getAttribute("name") == name)  
+           {  
+               container.push(elements[i]);  
+           }  
+       }  
+   }  
+   var elements = [];  
+   FindTagsByName(elements, "code", "pre");  
+   FindTagsByName(elements, "code", "textarea");  
+   
+ for(var i=0; i < elements.length; i++) {  
+ if(elements[i].nodeName.toUpperCase() == "TEXTAREA") {  
+  var childNode = elements[i].childNodes[0];  
+  var newNode = document.createTextNode(childNode.nodeValue.replace(/<br\s*\/?>/gi,'\n'));  
+  elements[i].replaceChild(newNode, childNode);  
+   
+ }  
+ else if(elements[i].nodeName.toUpperCase() == "PRE") {  
+  brs = elements[i].getElementsByTagName("br");  
+  for(var j = 0, brLength = brs.length; j < brLength; j++) {  
+   var newNode = document.createTextNode("\n");  
+   elements[i].replaceChild(newNode, brs[0]);  
+  }  
+ }  
+ }  
+ //clipboard does not work well, no line breaks  
+ // dp.SyntaxHighlighter.ClipboardSwf =  
+ //"http://sites.google.com/site/tmsanchez/clipboard.swf";  
+ dp.SyntaxHighlighter.HighlightAll("code");  
+ //]]>  
+ </script>
+
+<script type="text/javascript" src="./README_files/803954089-widgets.js.descarga"></script>
+<script type="text/javascript" src="./README_files/plusone.js.descarga" gapi_processed="true"></script>
+<script type="text/javascript">
+window['__wavt'] = 'AOuZoY5DrnlIXhUOWTg0t5_DW-U6gGoAQw:1483538112309';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d4785988599388365910','//tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html','4785988599388365910');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '4785988599388365910', 'bloggerUrl': 'https://www.blogger.com', 'title': 'El blog de tmsanchez', 'pageType': 'item', 'postId': '7173113517320147597', 'url': 'http://tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html', 'canonicalUrl': 'http://tmsanchezdev.blogspot.com/2015/03/html-report-from-mysqlworkbench-6x.html', 'homepageUrl': 'http://tmsanchezdev.blogspot.com.co/', 'searchUrl': 'http://tmsanchezdev.blogspot.com.co/search', 'canonicalHomepageUrl': 'http://tmsanchezdev.blogspot.com/', 'blogspotFaviconUrl': 'http://tmsanchezdev.blogspot.com.co/favicon.ico', 'hasCustomDomain': false, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'useUniversalAnalytics': false, 'pageName': 'HTML Report from MySQLWorkbench 6.x Schema Model', 'pageTitle': 'El blog de tmsanchez: HTML Report from MySQLWorkbench 6.x Schema Model', 'encoding': 'UTF-8', 'locale': 'es', 'localeUnderscoreDelimited': 'es', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22El blog de tmsanchez - Atom\x22 href\x3d\x22http://tmsanchezdev.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22El blog de tmsanchez - RSS\x22 href\x3d\x22http://tmsanchezdev.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22El blog de tmsanchez - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/4785988599388365910/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22El blog de tmsanchez - Atom\x22 href\x3d\x22http://tmsanchezdev.blogspot.com/feeds/7173113517320147597/comments/default\x22 /\x3e\n', 'meTag': '', 'openIdOpTag': '', 'postImageThumbnailUrl': 'http://2.bp.blogspot.com/-6O5ntJoM_2Y/VRRs4Pv8rJI/AAAAAAAAADM/okfwhoNY3kI/s72-c/installaPlugin.png', 'postImageUrl': 'http://2.bp.blogspot.com/-6O5ntJoM_2Y/VRRs4Pv8rJI/AAAAAAAAADM/okfwhoNY3kI/s1600/installaPlugin.png', 'mobileHeadScript': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/0d81398a922284ce', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sharing': {'platforms': [{'name': 'Obtener enlace', 'key': 'link', 'shareMessage': 'Obtener enlace', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Compartir en Facebook', 'target': 'facebook'}, {'name': 'Escribe un blog', 'key': 'blogThis', 'shareMessage': 'Escribe un blog', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Compartir en Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Compartir en Pinterest', 'target': 'pinterest'}, {'name': 'Google+', 'key': 'googlePlus', 'shareMessage': 'Compartir en Google+', 'target': 'googleplus'}, {'name': 'Correo electrónico', 'key': 'email', 'shareMessage': 'Correo electrónico', 'target': 'email'}], 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27es\x27};\x3c/script\x3e'}}}, {'name': 'features', 'data': {'widgetVisibility': true}}, {'name': 'messages', 'data': {'linkCopiedToClipboard': 'El enlace se ha copiado en el Portapapeles.', 'postLink': 'Enlace de la entrada'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Personalizado', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'HTML Report from MySQLWorkbench 6.x Schema Model', 'description': ' This begun in 2010 when I started to create a Lua script to generate an HTML report from MySQLWorkbench 5.x ( http://tmsanchezdev.blogspot....', 'featuredImage': 'http://2.bp.blogspot.com/-6O5ntJoM_2Y/VRRs4Pv8rJI/AAAAAAAAADM/okfwhoNY3kI/s1600/installaPlugin.png', 'url': 'http://tmsanchezdev.blogspot.com.co/2015/03/html-report-from-mysqlworkbench-6x.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isSearch': false, 'isLabelSearch': false, 'postId': 7173113517320147597}}]);
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/3054954425-lbx__es.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr', 'loadingMessage': 'Cargando\x26hellip;'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogListView', new _WidgetInfo('BlogList1', 'sidebar', null, document.getElementById('BlogList1'), {'numItemsToShow': 0, 'totalItems': 4}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FollowersView', new _WidgetInfo('Followers1', 'sidebar', null, document.getElementById('Followers1'), {}, 'displayModeFull'));
+</script>
+
+<link type="text/css" rel="stylesheet" href="./README_files/368954415-lightbox_bundle.css"><script type="text/javascript" src="./README_files/3054954425-lbx__es.js.descarga"></script></body></html>
