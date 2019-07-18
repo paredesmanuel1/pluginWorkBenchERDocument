@@ -74,7 +74,7 @@ def htmlDataDictionary(catalog):
       for column in table.columns:
         pk = ('No', 'Yes')[bool(table.isPrimaryKeyColumn(column))]
         fk = ('No', 'Yes')[bool(table.isForeignKeyColumn(column))]
-        nn = ('No', 'Yes')[bool(column.isNotNull)]
+        nn = ('Yes', 'No')[bool(column.isNotNull)]
         print >>htmlFile, "<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (column.name,column.formattedType,nn,pk,fk,column.defaultValue,column.comment)
       print >>htmlFile, "</table><a href=\"#home\">Table List </a></br>"
     print >>htmlFile, "</body></html>"
